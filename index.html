@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Nilu Bhai Shoes | E-commerce product page</title>
+  <meta name="description" content="Nilu Bhai Shoes — Fall Limited Edition Sneakers. Low-profile casual sneakers with a durable rubber outer sole.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner container">
+
+      <button class="header__menu-btn" id="menuOpen" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <img src="./images/icon-menu.svg" alt="" width="16" height="15">
+      </button>
+
+      <a class="header__logo" href="#" aria-label="Sneakers — home">
+        <img src="./images/logo.svg" alt="sneakers" width="138" height="20">
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#">Collections</a></li>
+          <li><a class="nav__link" href="#">Men</a></li>
+          <li><a class="nav__link" href="#">Women</a></li>
+          <li><a class="nav__link" href="#">About</a></li>
+          <li><a class="nav__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="cartToggle" aria-label="Open cart" aria-expanded="false" aria-controls="cartDropdown">
+          <img src="./images/icon-cart.svg" alt="" width="22" height="20">
+          <span class="cart-btn__badge" id="cartBadge" hidden>0</span>
+        </button>
+
+        <button class="avatar-btn" aria-label="User profile">
+          <img src="./images/image-avatar.png" alt="" width="50" height="50">
+        </button>
+      </div>
+
+      <div class="cart" id="cartDropdown" role="dialog" aria-label="Shopping cart" hidden>
+        <h2 class="cart__title">Cart</h2>
+        <div class="cart__body" id="cartBody">
+          <p class="cart__empty">Your cart is empty.</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="product container">
+
+    <section class="gallery" aria-label="Product images">
+      <div class="gallery__stage">
+        <button class="gallery__main" id="galleryMain" aria-label="Open image gallery">
+          <img id="mainImage" src="./images/image-product-1.jpg" alt="Fall Limited Edition Sneaker, view 1 — beige and white low-profile sneaker on an orange background" width="1000" height="1000">
+        </button>
+
+        <div class="gallery__arrows">
+          <button class="gallery__arrow" id="prevImage" aria-label="Previous image">
+            <svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+          <button class="gallery__arrow" id="nextImage" aria-label="Next image">
+            <svg width="13" height="18" viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="gallery__thumbs" role="list">
+        <li><button class="thumb is-active" data-index="0" aria-label="Show image 1" aria-current="true"><img src="./images/image-product-1-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="1" aria-label="Show image 2"><img src="./images/image-product-2-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="2" aria-label="Show image 3"><img src="./images/image-product-3-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="3" aria-label="Show image 4"><img src="./images/image-product-4-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+      </ul>
+    </section>
+
+    <section class="info">
+      <p class="info__brand">Sneaker Company</p>
+      <h1 class="info__title">Fall Limited Edition Sneakers</h1>
+      <p class="info__desc">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they&rsquo;ll withstand everything the weather can offer.
+      </p>
+
+      <div class="info__pricing">
+        <div class="info__price-row">
+          <span class="info__price">$125.00</span>
+          <span class="info__discount">50%</span>
+        </div>
+        <s class="info__old-price">$250.00</s>
+      </div>
+
+      <div class="info__actions">
+        <div class="qty" role="group" aria-label="Quantity selector">
+          <button class="qty__btn" id="qtyMinus" aria-label="Decrease quantity">
+            <svg width="12" height="4" viewBox="0 0 12 4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" fill="#FF7E1B" fill-rule="nonzero"/></svg>
+          </button>
+          <span class="qty__value" id="qtyValue" aria-live="polite">0</span>
+          <button class="qty__btn" id="qtyPlus" aria-label="Increase quantity">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" fill="#FF7E1B" fill-rule="nonzero"/></svg>
+          </button>
+        </div>
+
+        <button class="btn-add" id="addToCart">
+          <svg width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="currentColor" fill-rule="nonzero"/></svg>
+          <span>Add to cart</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Product image gallery" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__content">
+      <button class="lightbox__close" data-lightbox-close aria-label="Close gallery">
+        <svg width="14" height="15" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="currentColor" fill-rule="evenodd"/></svg>
+      </button>
+
+      <div class="lightbox__stage">
+        <button class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" aria-label="Previous image">
+          <svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+        <img class="lightbox__img" id="lightboxImage" src="./images/image-product-1.jpg" alt="Fall Limited Edition Sneaker, view 1 — beige and white low-profile sneaker on an orange background" width="1000" height="1000">
+        <button class="lightbox__arrow lightbox__arrow--next" id="lbNext" aria-label="Next image">
+          <svg width="13" height="18" viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+      </div>
+
+      <ul class="lightbox__thumbs" role="list">
+        <li><button class="thumb is-active" data-index="0" aria-label="Show image 1" aria-current="true"><img src="./images/image-product-1-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="1" aria-label="Show image 2"><img src="./images/image-product-2-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="2" aria-label="Show image 3"><img src="./images/image-product-3-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+        <li><button class="thumb" data-index="3" aria-label="Show image 4"><img src="./images/image-product-4-thumbnail.jpg" alt="" width="176" height="176" loading="lazy" decoding="async"></button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <div class="mobile-nav__backdrop" data-menu-close></div>
+    <nav class="mobile-nav__panel" aria-label="Mobile">
+      <button class="mobile-nav__close" data-menu-close aria-label="Close menu">
+        <img src="./images/icon-close.svg" alt="" width="14" height="15">
+      </button>
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="#">Collections</a></li>
+        <li><a class="mobile-nav__link" href="#">Men</a></li>
+        <li><a class="mobile-nav__link" href="#">Women</a></li>
+        <li><a class="mobile-nav__link" href="#">About</a></li>
+        <li><a class="mobile-nav__link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Nilu Bhai</a>.
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
